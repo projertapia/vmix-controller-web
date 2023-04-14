@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let data = "controllerSetById('fadetoblack', 'transitionnormal');\
+        controllerSetById('A1', 'blank');\
+        controllerSetById('P1', 'blank');\
+        controllerSetById('O1V1', 'overlaynormal');\
+        controllerSetById('O2V1', 'overlaynormal');\
+        controllerSetById('O3V1', 'overlaynormal');\
+        controllerSetById('O4V1', 'overlaynormal');\
+        controllerSetById('A2', 'active');\
+        controllerSetById('P2', 'preview');\
+        controllerSetById('O1V2', 'overlaynormal');\
+        controllerSetById('O2V2', 'overlaynormal');\
+        controllerSetById('O3V2', 'overlaynormal');\
+        controllerSetById('O4V2', 'overlaynormal');\
+        controllerSetById('A3', 'blank');\
+        controllerSetById('P3', 'blank');\
+        controllerSetById('O1V3', 'overlayselected1');\
+        controllerSetById('O2V3', 'overlaynormal');\
+        controllerSetById('O3V3', 'overlaynormal');\
+        controllerSetById('O4V3', 'overlaynormal');\
+        controllerSetById('A4', 'blank');\
+        controllerSetById('P4', 'blank');\
+        controllerSetById('O1V4', 'overlaynormal');\
+        controllerSetById('O2V4', 'overlaynormal');\
+        controllerSetById('O3V4', 'overlaynormal');\
+        controllerSetById('O4V4', 'overlaynormal');\ ";
+        
+        
+        let dataArray = data.split(";");
+        let groupedData = {};
+        for (let i = 0; i < dataArray.length; i++) {
+            let match = dataArray[i].match(/'(\w+)(\d+)',\s*'(\w+)'/);        
+            if (match !== null) {
+                let key = match[2];
+                let value = match[3];            
+                if (!groupedData.hasOwnProperty(key)) {
+                    groupedData[key] = {};
+                }            
+                groupedData[key][match[1]] = value;
+            }
+        }
+
+console.log(groupedData);
+    </script>
+</body>
+</html>

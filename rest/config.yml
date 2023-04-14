@@ -1,0 +1,29 @@
+vmix_rest_api:
+
+  # Path provided by vMix under Settings > Web Controller
+  # If vMix is running on the current host, you should be
+  # able to use localhost instead of an IP address.
+  # Examples: http://10.211.55.6:8080, http://localhost:8080
+  vmix_path: http://192.168.3.31:8088
+
+  # Port to make the API available on localhost. Don't use
+  # the same port as vMix above.
+  # Example: 3000
+  port: 3000
+
+  # Log requests to the console
+  logging: false
+
+  # Remote access
+  # Allow remote access to the REST API outside of your 
+  # local network. You'll be given an access URL when
+  # you start the REST API. This URL changes every time 
+  # you start the REST API.
+  remote_access:
+    enabled: false
+    
+    # Make the native vMix Web Controller available remotely.
+    # You'll be given the remote web controller URL when you
+    # start the REST API.
+    remote_web_controller: false
+    

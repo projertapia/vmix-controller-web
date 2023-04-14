@@ -1,0 +1,22 @@
+{
+    "program": {
+      "button1": {
+        "id": "btn-prev-1",
+        "name": "Cam 1",
+        "input": "Entrada 1",
+        "status": "Estado del botón 1"
+      },
+      "button2": {
+        "id": "btn-prev-2",
+        "name": "Cam 2",
+        "input": "Entrada 2",
+        "status": "Estado del botón 2"
+      },
+      "button3": {
+        "id": "btn-prev-3",
+        "name": "Cam 3",
+        "input": "Entrada 3",
+        "status": "Estado del botón 3"
+      }
+    }
+  }

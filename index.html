@@ -1,12 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vMix Web Controller</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    
+    <div>
+        <h3 class="titleSection">Preview</h3>
+        <section class="btnSections" id="prevBtns">
+            <button type="button" class="btn atem-button prev" id="btn-prev-1" onclick="sendInputs(this, 'PreviewInput', 1, 'inputs')"><span>Cam 1</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-2" onclick="sendInputs(this,'PreviewInput', 2, 'inputs')"><span>Cam 2</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-3" onclick="sendInputs(this,'PreviewInput', 3, 'inputs')"><span>Cam 3</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-4" onclick="sendInputs(this,'PreviewInput', 4, 'inputs')"><span>Cam 4</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-5" onclick="sendInputs(this,'PreviewInput', 5, 'inputs')"><span>Cam 5</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-6" onclick="sendInputs(this,'PreviewInput', 6, 'inputs')"><span>Cam 6</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-7" onclick="sendInputs(this,'PreviewInput', 7, 'inputs')"><span>Cam 7</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-8" onclick="sendInputs(this,'PreviewInput', 8, 'inputs')"><span>Cam 8</span></button>
+            <div class="space"></div>
+            <button type="button" class="btn atem-button prev" id="btn-prev-9" onclick="sendInputs(this, 'PreviewInput', 9, 'inputs')"><span>Cam 9</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-10" onclick="sendInputs(this,'PreviewInput', 10, 'inputs')"><span>Cam 10</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-11" onclick="sendInputs(this,'PreviewInput', 11, 'inputs')"><span>Cam 11</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-12" onclick="sendInputs(this,'PreviewInput', 12, 'inputs')"><span>Cam 12</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-13" onclick="sendInputs(this,'PreviewInput', 13, 'inputs')"><span>Cam 13</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-14" onclick="sendInputs(this,'PreviewInput', 14, 'inputs')"><span>Cam 14</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-15" onclick="sendInputs(this,'PreviewInput', 15, 'inputs')"><span>Cam 15</span></button>
+            <button type="button" class="btn atem-button prev" id="btn-prev-16" onclick="sendInputs(this,'PreviewInput', 16, 'inputs')"><span>Cam 16</span></button>
+        </section>
+    </div>
+    <div>
+        <h3 class="titleSection">Program</h3>
+        <section class="btnSections" id="progBtns">
+            <button type="button" class="btn atem-button prog" id="btn-prog-1" onclick="sendInputs(this, 'CutDirect', 1, 'inputs')"><span>Cam 1</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-2" onclick="sendInputs(this,'CutDirect', 2, 'inputs')"><span>Cam 2</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-3" onclick="sendInputs(this,'CutDirect', 3, 'inputs')"><span>Cam 3</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-4" onclick="sendInputs(this,'CutDirect', 4, 'inputs')"><span>Cam 4</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-5" onclick="sendInputs(this,'CutDirect', 5, 'inputs')"><span>Cam 5</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-6" onclick="sendInputs(this,'CutDirect', 6, 'inputs')"><span>Cam 6</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-7" onclick="sendInputs(this,'CutDirect', 7, 'inputs')"><span>Cam 7</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-8" onclick="sendInputs(this,'CutDirect', 8, 'inputs')"><span>Cam 8</span></button>
+            <div class="space"></div>
+            <button type="button" class="btn atem-button prog" id="btn-prog-9" onclick="sendInputs(this, 'CutDirect', 9, 'inputs')"><span>Cam 9</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-10" onclick="sendInputs(this,'CutDirect', 10, 'inputs')"><span>Cam 10</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-11" onclick="sendInputs(this,'CutDirect', 11, 'inputs')"><span>Cam 11</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-12" onclick="sendInputs(this,'CutDirect', 12, 'inputs')"><span>Cam 12</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-13" onclick="sendInputs(this,'CutDirect', 13, 'inputs')"><span>Cam 13</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-14" onclick="sendInputs(this,'CutDirect', 14, 'inputs')"><span>Cam 14</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-15" onclick="sendInputs(this,'CutDirect', 15, 'inputs')"><span>Cam 15</span></button>
+            <button type="button" class="btn atem-button prog" id="btn-prog-16" onclick="sendInputs(this,'CutDirect', 16, 'inputs')"><span>Cam 16</span></button>
+        </section>
+    </div>
+    <button type="button" class="btn atem-button" id="btn-prev-1" onclick="sendInputs('PreviewInput', 5, 'inputs')"><span>Cam 1</span></button>
+    <button type="button" class="btn atem-button on" id="btn-prev-1"><span>Cam 1</span></button>
+    <button type="button" class="btn atem-button prev active" id="btn-prev-2"><span>Cam 2</span></button>
+    <button type="button" class="btn atem-button prog" id="btn-prog-1"><span>Cam 1</span></button>
+    <button type="button" class="btn atem-button key" id="btn-prog-1"><span>Key 1</span></button>
+    <hr>
+    <div id="grouplistinputs" class="menu">
+        <ul id="listinputs">
+          <li><a href="#" data-number="1" data-title="Input 1">Input 1</a></li>
+          <li><a href="#" data-number="2" data-title="Input 2">Input 2</a></li>
+          <li><a href="#" data-number="3" data-title="Input 3">Input 3</a></li>
+        </ul>
+      </div>
+    <script>
+        const config = 'config.json?V1';
+        let HOST="";
+        let PORT="";
+        let json="";
+        let dataXml = "";
+        let resultJson = {};
+        let versionJson = {};
+        let editionJson = {};
+        let inputsJson = {};
+        let overlaysJson = {};
+        let previewJson = {};
+        let activeJson = {};
+        let fadeToBlackJson = {};
+        let transitionsJson = {};
+        let recordingJson = {};
+        let externalJson = {};
+        let streamingJson = {};
+        let playListJson = {};
+        let multiCorderJson = {};
+        let fullscreenJson = {};
+        let audioJson = {};
+        let dynamicJson = {};
+        let groupedData = {};
+        //DOMs
+        const lista = document.getElementById("listinputs");
+
+        function conex(){
+            fetch(config)
+            .then(response => response.json()) // convierte la respuesta a un objeto JSON
+            .then(data => {
+                //console.log(data);
+                HOST = data.host;
+                PORT = data.port;
+                getInputs(HOST,PORT);
+            })
+            .catch(error => {
+                // maneja cualquier error aquí
+                console.error(error);
+            });
+        }
+        
+        function getInputs(host,port){
+            fetch('//'+host+':'+port+'/API/',{
+                method: 'POST'
+            })
+            .then(response => response.text())
+            .then(xmlString => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+                resultJson[xmlDoc.documentElement.nodeName] = xmlToJson(xmlDoc.documentElement);
+                inputsJson = resultJson.vmix.inputs.input;
+                overlaysJson = resultJson.vmix.overlays;
+                dynamicJson = resultJson.vmix.dynamic;
+                audioJson = resultJson.vmix.audio;
+                fullscreenJson = resultJson.vmix.fullscreen;
+                multiCorderJson = resultJson.vmix.multiCorder;
+                playListJson = resultJson.vmix.playList;
+                streamingJson = resultJson.vmix.streaming;
+                externalJson = resultJson.vmix.external;
+                recordingJson = resultJson.vmix.recording;
+                transitionsJson = resultJson.vmix.transitions.transition;
+                fadeToBlackJson = resultJson.vmix.fadeToBlack;
+                previewJson = resultJson.vmix.preview;
+                activeJson = resultJson.vmix.active;
+                overlaysJson = resultJson.vmix.overlays.overlay;
+                versionJson = resultJson.vmix.version["#text"];
+                editionJson = resultJson.vmix.edition["#text"];
+                createListMenu();
+            })
+            .catch(error => {
+                // maneja cualquier error aquí
+                console.error(error);
+            });
+        }
+        function sendInputs(button, func, input, type){
+            const buttonId = button.getAttribute('id');
+            // Crea un objeto con los datos a enviar
+            const data = {
+                "function": func,
+                "input": input,
+                "type": type
+            };
+            // Crea una petición fetch para enviar los datos a conex.php
+            fetch('//'+HOST+':'+PORT+'/api/?Function='+func+'&Input='+input, {
+                method: "POST"
+            })
+            .then(response => response.text())
+            .then(data => {
+                if(data=='Function completed successfully.'){
+                    
+                    if (buttonId.includes("btn-prev")) {
+                        removeActiveBtn(btnPrev);
+                    }
+                    if (buttonId.includes("btn-prog")) {
+                        removeActiveBtn(btnprog);
+                    }
+                    button.classList.add('active');
+                    updateTally();
+                }
+            })
+            .catch(error => {
+                // Maneja los errores
+                console.error(error);
+            });
+            
+        }
+        
+        function createListMenu(){
+            lista.innerHTML = "";
+            //Create list menu contextual
+            for (let i = 0; i < inputsJson.length; i++) {
+                const elementoDeLista = document.createElement("li");
+                const enlace = document.createElement("a");
+                enlace.href = "#";
+                enlace.setAttribute("data-number", inputsJson[i]['@attributes']['number']);
+                enlace.setAttribute("data-title", inputsJson[i]['@attributes']['shortTitle']);
+                enlace.setAttribute("data-key", inputsJson[i]['@attributes']['key']);
+                enlace.textContent = inputsJson[i]["#text"];
+                elementoDeLista.appendChild(enlace);
+                lista.appendChild(elementoDeLista);
+            }
+        }
+
+        function xmlToJson(xml) {
+            let obj = {};
+            if (xml.nodeType === 1) {
+                if (xml.attributes.length > 0) {
+                obj["@attributes"] = {};
+                for (let j = 0; j < xml.attributes.length; j++) {
+                    const attribute = xml.attributes.item(j);
+                    obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+                }
+                }
+            } else if (xml.nodeType === 3) {
+                obj = xml.nodeValue.trim();
+            }
+            if (xml.hasChildNodes()) {
+                for(let i = 0; i < xml.childNodes.length; i++) {
+                const item = xml.childNodes.item(i);
+                const nodeName = item.nodeName;
+                if (typeof(obj[nodeName]) === "undefined") {
+                    obj[nodeName] = xmlToJson(item);
+                } else {
+                    if (typeof(obj[nodeName].push) === "undefined") {
+                    const old = obj[nodeName];
+                    obj[nodeName] = [];
+                    obj[nodeName].push(old);
+                    }
+                    obj[nodeName].push(xmlToJson(item));
+                }
+                }
+            }
+            return obj;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            conex();
+        });
+        //FUNCTION MOUSE
+        const btnPrev1 = document.getElementById("btn-prev-1");
+        const listInputs = document.getElementById("grouplistinputs");
+        const prevBox = document.getElementById("prevBtns");
+        const btnPrev = prevBox.querySelectorAll("button");
+
+        const progBox = document.getElementById("progBtns");
+        const btnprog = progBox.querySelectorAll("button");
+
+        for (let i = 0; i < btnPrev.length; i++) {
+            btnPrev[i].addEventListener("contextmenu", function(event) {
+                event.preventDefault(); // prevenir menú contextual del navegador
+                const botonId = event.target.id;
+                listcontex(event, botonId);
+            });
+        }
+        for (let i = 0; i < btnprog.length; i++) {
+            btnprog[i].addEventListener("contextmenu", function(event) {
+                event.preventDefault(); // prevenir menú contextual del navegador
+                const botonId = event.target.id;
+                listcontex(event, botonId);
+            });
+        }
+        function listcontex(event, botonId) {
+            event.preventDefault();
+            listInputs.dataset.id = botonId;
+            listInputs.style.left = event.pageX + "px";
+            listInputs.style.top = event.pageY + "px";
+            listInputs.style.display = "block";
+        };
+        listInputs.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (event.target.nodeName === "A") {
+                const inputNumber = event.target.getAttribute("data-number");
+                const inputKey = event.target.getAttribute("data-key");
+                const inputTitle = event.target.getAttribute("data-title");
+                console.log("Opción seleccionada:", inputNumber);
+                listInputs.style.display = "none";
+                const btn = document.getElementById(listInputs.dataset.id);
+                const btnText = btn.children[0];
+                const onclickValue = btn.onclick.toString();
+                let newOnclickValue="";
+                if (listInputs.dataset.id.includes("btn-prev")) {
+                     newOnclickValue = "sendInputs(this, 'PreviewInput', "+inputNumber+", 'inputs')";
+                }
+                if (listInputs.dataset.id.includes("btn-prog")) {
+                     newOnclickValue = "sendInputs(this, 'CutDirect', "+inputNumber+", 'inputs')";
+                }
+                btn.setAttribute('onclick', newOnclickValue);
+                btn.classList.remove("active");
+                btnText.innerText = inputTitle;
+            }
+        });
+        function removeActiveBtn(listbtn){
+            for (let i = 0; i < listbtn.length; i++) {
+                listbtn[i].addEventListener("click", function() {
+                    // Remueve la clase "active" de todos los botones
+                    for (let j = 0; j < listbtn.length; j++) {
+                    if (listbtn[j] !== this) { // Excepto el botón actual
+                        listbtn[j].classList.remove("active");
+                    }
+                    }
+                    // Agrega la clase "active" al botón actual
+                    this.classList.add("active");
+                });
+            }
+        }
+
+        function updateTally(){
+            //http://192.168.3.31:8088/controllerupdate/
+             // Crea una petición fetch para enviar los datos a conex.php
+             fetch('//'+HOST+':'+PORT+'/controllerupdate/', {
+                method: "POST"
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    let dataArray = data.split(";");
+                    for (let i = 0; i < dataArray.length; i++) {
+                        let match = dataArray[i].match(/'(\w+)(\d+)',\s*'(\w+)'/);        
+                        if (match !== null) {
+                            let key = match[2];
+                            let value = match[3];            
+                            if (!groupedData.hasOwnProperty(key)) {
+                                groupedData[key] = {};
+                            }            
+                            groupedData[key][match[1]] = value;
+                        }
+                    }
+                }
+            })
+            .catch(error => {
+                // Maneja los errores
+                console.error(error);
+            });
+        };
+
+        let intervalId = setInterval(function() {
+            updateTally();
+        }, 1000);
+
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                clearInterval(intervalId);
+            } else {
+                intervalId = setInterval(function() {
+                    updateTally();
+                }, 1000);
+            }
+        });
+
+    </script>
 </body>
 </html>

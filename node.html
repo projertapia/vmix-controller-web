@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node</title>
+</head>
+<body>
+    <script>
+        // Crear una nueva instancia de WebSocket, pasando como parámetro la URL del servidor
+        const socket = new WebSocket('ws://192.168.3.31:8099');
+
+        // Manejador de eventos para cuando se abre la conexión
+        socket.addEventListener('open', function (event) {
+            console.log('Conexión abierta!');
+            // Enviar un mensaje al servidor
+            socket.send('Hola servidor!');
+        });
+
+        // Manejador de eventos para cuando se recibe un mensaje del servidor
+        socket.addEventListener('message', function (event) {
+            console.log('Mensaje recibido del servidor:', event.data);
+        });
+
+        // Manejador de eventos para cuando se cierra la conexión
+        socket.addEventListener('close', function (event) {
+            console.log('Conexión cerrada!');
+        });
+
+        // Manejador de eventos para cuando ocurre un error en la conexión
+        socket.addEventListener('error', function (event) {
+            console.log('Error en la conexión:', event);
+        });
+    </script>
+</body>
+</html>
