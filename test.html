@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        /*
        let data = "controllerSetById('fadetoblack', 'transitionnormal');\
         controllerSetById('A1', 'blank');\
         controllerSetById('P1', 'blank');\
@@ -49,7 +50,29 @@
             }
         }
 
-console.log(groupedData);
+console.log(groupedData);*/
+
+let url = '//192.168.3.31:8088/controllerupdate/'
+
+// Opciones de conexión
+const options = {
+  headers: {
+    Connection: 'Keep-Alive'
+  }
+};
+
+const source = new EventSource(url, options);
+
+// Manejador de eventos de mensaje
+source.onmessage = function(event) {
+  console.log(event.data);
+};
+
+// Manejador de eventos de error
+source.onerror = function(error) {
+  console.error(error);
+};
+
     </script>
 </body>
 </html>

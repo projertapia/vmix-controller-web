@@ -66,6 +66,8 @@ body{background-color:#262626;}
     width: 100%;
     height: 100%;
     top: 0;
+    white-space: break-spaces;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   .on{
@@ -75,11 +77,11 @@ body{background-color:#262626;}
   .on:hover{
     background: conic-gradient(from 180deg, #9e9e9e, #c3c3c7, #9e9e9e);
   }
-  .prev.active{
+  .prev.preview, .prev.active{
     background: conic-gradient(from 180deg, #12721d, #126a1b, #12721d);
     box-shadow: 0 0 10px #44b31a;
   }
-  .prev.active:hover{
+  .prev.preview:hover, .prev.active:hover{
     background: conic-gradient(from 180deg, #0d6c18, #078714, #0d6c18);
   }
   .prog.active{
