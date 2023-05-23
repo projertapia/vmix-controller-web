@@ -154,7 +154,8 @@
                 "type": type
             };
             // Crea una petición fetch para enviar los datos a conex.php
-            fetch('//'+HOST+':'+PORT+'/api/?Function='+func+'&Input='+input, {
+            fetch('http://'+HOST+':'+PORT+'/api/?Function='+func+'&Input='+input, {
+                mode: 'no-cors' ,
                 method: "POST"
             })
             .then(response => response.text())
